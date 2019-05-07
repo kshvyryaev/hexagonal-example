@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HexagonalExample.Domain.Entities
 {
-    public class Book
+    public class Book : BaseEntity
     {
         #region Constructors
 
@@ -15,8 +15,6 @@ namespace HexagonalExample.Domain.Entities
         #endregion Constructors
 
         #region Properties
-
-        public string Id { get; set; }
 
         public string Name { get; set; }
 
