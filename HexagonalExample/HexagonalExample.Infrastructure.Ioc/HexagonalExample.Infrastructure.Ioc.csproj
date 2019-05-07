@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HexagonalExample.Domain.Contracts\HexagonalExample.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\HexagonalExample.Domain.Core\HexagonalExample.Domain.Core.csproj" />
+    <ProjectReference Include="..\HexagonalExample.Infrastructure.Caching.Memory\HexagonalExample.Infrastructure.Caching.Memory.csproj" />
+    <ProjectReference Include="..\HexagonalExample.Infrastructure.Data.Mongo\HexagonalExample.Infrastructure.Data.Mongo.csproj" />
+    <ProjectReference Include="..\HexagonalExample.Infrastructure.Logging.NLog\HexagonalExample.Infrastructure.Logging.NLog.csproj" />
+    <ProjectReference Include="..\HexagonalExample.Infrastructure.Mapping.AutoMapper\HexagonalExample.Infrastructure.Mapping.AutoMapper.csproj" />
+    <ProjectReference Include="..\HexagonalExample.Infrastructure.Validation.FluentValidation\HexagonalExample.Infrastructure.Validation.FluentValidation.csproj" />
+  </ItemGroup>
+
+</Project>
