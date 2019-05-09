@@ -24,8 +24,8 @@ namespace HexagonalExample.Api
 
             services.AddMvc(options => 
             {
-                options.Filters.Add<ValidationExceptionFilter>();
                 options.Filters.Add<ExceptionFilter>();
+                options.Filters.Add<ValidationExceptionFilter>();
             })
             .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
