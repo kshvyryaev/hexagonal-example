@@ -12,6 +12,7 @@
     <ProjectReference Include="..\HexagonalExample.Api.Models\HexagonalExample.Api.Models.csproj" />
     <ProjectReference Include="..\HexagonalExample.Domain.Contracts\HexagonalExample.Domain.Contracts.csproj" />
     <ProjectReference Include="..\HexagonalExample.Domain.Entities\HexagonalExample.Domain.Entities.csproj" />
+    <ProjectReference Include="..\HexagonalExample.Infrastructure.Data.EF.Models\HexagonalExample.Infrastructure.Data.EF.Models.csproj" />
     <ProjectReference Include="..\HexagonalExample.Infrastructure.Data.Mongo.Models\HexagonalExample.Infrastructure.Data.Mongo.Models.csproj" />
   </ItemGroup>
 
