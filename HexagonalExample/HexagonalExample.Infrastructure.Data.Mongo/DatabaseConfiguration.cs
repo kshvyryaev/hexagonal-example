@@ -11,7 +11,7 @@ namespace HexagonalExample.Infrastructure.Data.Mongo
 
         internal static IMongoDatabase Database { get; private set; }
 
-        public static void ConfigureDatabase(this IConfiguration configuration)
+        public static void ConfigureDatabase(IConfiguration configuration)
         {
             if (configuration == null)
             {

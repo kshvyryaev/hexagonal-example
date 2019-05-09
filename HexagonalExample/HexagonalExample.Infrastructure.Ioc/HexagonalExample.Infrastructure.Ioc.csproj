@@ -13,6 +13,7 @@
     <ProjectReference Include="..\HexagonalExample.Domain.Contracts\HexagonalExample.Domain.Contracts.csproj" />
     <ProjectReference Include="..\HexagonalExample.Domain.Core\HexagonalExample.Domain.Core.csproj" />
     <ProjectReference Include="..\HexagonalExample.Infrastructure.Caching.Memory\HexagonalExample.Infrastructure.Caching.Memory.csproj" />
+    <ProjectReference Include="..\HexagonalExample.Infrastructure.Data.EF\HexagonalExample.Infrastructure.Data.EF.csproj" />
     <ProjectReference Include="..\HexagonalExample.Infrastructure.Data.Mongo\HexagonalExample.Infrastructure.Data.Mongo.csproj" />
     <ProjectReference Include="..\HexagonalExample.Infrastructure.Logging.NLog\HexagonalExample.Infrastructure.Logging.NLog.csproj" />
     <ProjectReference Include="..\HexagonalExample.Infrastructure.Mapping.AutoMapper\HexagonalExample.Infrastructure.Mapping.AutoMapper.csproj" />
