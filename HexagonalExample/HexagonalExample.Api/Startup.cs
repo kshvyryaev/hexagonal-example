@@ -40,15 +40,6 @@ namespace HexagonalExample.Api
             app.UseCors(x =>
                 x.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin().AllowCredentials());
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseHsts();
-            }
-
             app.UseHttpsRedirection();
             app.UseMvc();
 
