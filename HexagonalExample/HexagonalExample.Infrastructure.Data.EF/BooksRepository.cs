@@ -91,15 +91,6 @@ namespace HexagonalExample.Infrastructure.Data.EF
             return _mapperAdapter.Map<IReadOnlyCollection<Book>>(bookModels);
         }
 
-        public IReadOnlyCollection<Book> GetAll()
-        {
-            List<BookEFModel> bookModels = _context.Books
-                .Include(x => x.Authors)
-                .ToList();
-
-            return _mapperAdapter.Map<IReadOnlyCollection<Book>>(bookModels);
-        }
-
         public async Task<Book> UpdateAsync(Book book)
         {
             var bookModel = _mapperAdapter.Map<Book, BookEFModel>(book);

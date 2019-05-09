@@ -14,8 +14,6 @@ namespace HexagonalExample.Domain.Contracts.Repositories
 
         Task<IReadOnlyCollection<Book>> GetAllAsync();
 
-        IReadOnlyCollection<Book> GetAll();
-
         Task<Book> UpdateAsync(Book book);
 
         Task<bool> DeleteAsync(string id);

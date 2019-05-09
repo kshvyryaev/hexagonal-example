@@ -61,12 +61,6 @@ namespace HexagonalExample.Infrastructure.Data.Mongo
             return _mapperAdapter.Map<IReadOnlyCollection<TEntity>>(models);
         }
 
-        public IReadOnlyCollection<TEntity> GetAll()
-        {
-            List<TModel> models = Collection.Find(x => true).ToList();
-            return _mapperAdapter.Map<IReadOnlyCollection<TEntity>>(models);
-        }
-
         public async Task<TEntity> UpdateAsync(TEntity entity)
         {
             return await SaveAsync(entity);
