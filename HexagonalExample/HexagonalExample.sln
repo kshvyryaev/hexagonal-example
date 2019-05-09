@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexagonalExample.Infrastruc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{849789FF-24B1-4C16-9367-E6C509DE683C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexagonalExample.Infrastructure.Data.EF.Models", "HexagonalExample.Infrastructure.Data.EF.Models\HexagonalExample.Infrastructure.Data.EF.Models.csproj", "{870A55A0-7B12-42F3-B29D-C049B3B9F548}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{15902C19-1F1A-47EE-B4B7-F22950B273B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15902C19-1F1A-47EE-B4B7-F22950B273B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15902C19-1F1A-47EE-B4B7-F22950B273B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{870A55A0-7B12-42F3-B29D-C049B3B9F548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870A55A0-7B12-42F3-B29D-C049B3B9F548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870A55A0-7B12-42F3-B29D-C049B3B9F548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870A55A0-7B12-42F3-B29D-C049B3B9F548}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +110,7 @@ Global
 		{56CBF70C-432A-441E-913F-E4CDB51EC009} = {12212F56-DF11-4846-86B1-B9E5BEF8185C}
 		{F35E8385-8E43-40AB-B73E-C2BEA1470D16} = {12212F56-DF11-4846-86B1-B9E5BEF8185C}
 		{15902C19-1F1A-47EE-B4B7-F22950B273B3} = {12212F56-DF11-4846-86B1-B9E5BEF8185C}
+		{870A55A0-7B12-42F3-B29D-C049B3B9F548} = {12212F56-DF11-4846-86B1-B9E5BEF8185C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9F0C198-CE8B-44FD-A682-9BFE510966EE}
