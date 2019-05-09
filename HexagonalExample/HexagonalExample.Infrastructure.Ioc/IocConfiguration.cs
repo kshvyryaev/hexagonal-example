@@ -51,6 +51,7 @@ namespace HexagonalExample.Infrastructure.Ioc
         private static void ConfigureValidators(this IServiceCollection services)
         {
             services.AddTransient<IValidatorAdapter<Book>, Validation.FluentValidation.BookValidatorAdapter>();
+            services.AddTransient<IValidatorAdapter<Author>, Validation.FluentValidation.AuthorValidatorAdapter>();
         }
 
         private static void ConfigureAdapters(this IServiceCollection services)

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
-using DomainValidationEntities = HexagonalExample.Domain.Entities.Validation;
+using DomainValidation = HexagonalExample.Domain.Entities.Validation;
 
 namespace HexagonalExample.Infrastructure.Validation.FluentValidation.Helpers
 {
     internal static class ErrorsParser
     {
-        internal static IEnumerable<DomainValidationEntities.ValidationError> ParseToValidationErrors(
+        internal static IReadOnlyCollection<DomainValidation.ValidationError> ParseToValidationErrors(
             this IEnumerable<ValidationFailure> fluentValidationErrors)
         {
             if (fluentValidationErrors == null)
@@ -17,8 +17,25 @@ namespace HexagonalExample.Infrastructure.Validation.FluentValidation.Helpers
             }
 
             return fluentValidationErrors
-                .Select(x => new DomainValidationEntities.ValidationError(x.PropertyName, x.ErrorMessage))
+                .Select(x => new DomainValidation.ValidationError
+                {
+                    PropertyName = x.PropertyName,
+                    ErrorMessage = x.ErrorMessage,
+                    AttemptedValue = x.AttemptedValue
+                })
                 .ToList();
+        }
+
+        internal static IReadOnlyCollection<DomainValidation.ValidationError> SetEntityNameForAllItems(
+            this IReadOnlyCollection<DomainValidation.ValidationError> validationErrors,
+            string entityName)
+        {
+            foreach (var error in validationErrors)
+            {
+                error.EntityName = entityName;
+            }
+
+            return validationErrors;
         }
     }
 }

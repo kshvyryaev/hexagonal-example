@@ -4,24 +4,12 @@ namespace HexagonalExample.Domain.Entities.Validation
 {
     public class ValidationError
     {
-        public ValidationError(string propertyName, string errorMessage)
-        {
-            if (string.IsNullOrWhiteSpace(propertyName))
-            {
-                throw new ArgumentNullException(nameof(propertyName));
-            }
+        public string EntityName { get; set; }
 
-            if (string.IsNullOrWhiteSpace(errorMessage))
-            {
-                throw new ArgumentNullException(nameof(errorMessage));
-            }
+        public string PropertyName { get; set; }
 
-            PropertyName = propertyName;
-            ErrorMessage = errorMessage;
-        }
+        public string ErrorMessage { get; set; }
 
-        public string PropertyName { get; }
-
-        public string ErrorMessage { get; }
+        public object AttemptedValue { get; set; }
     }
 }

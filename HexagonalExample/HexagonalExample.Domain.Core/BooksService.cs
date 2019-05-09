@@ -42,7 +42,7 @@ namespace HexagonalExample.Domain.Core
 
         public async Task<Book> CreateAsync(Book book)
         {
-            _bookValidator.ValidateAndThrowIfFailed(book);
+            _bookValidator.ValidateEntityAndThrow(book);
 
             Book createdBook = await _booksRepository.CreateAsync(book);
             _cacheAdapter.Set(createdBook.GetKeyForCache(), createdBook);
@@ -84,7 +84,7 @@ namespace HexagonalExample.Domain.Core
 
         public async Task<Book> UpdateAsync(Book book)
         {
-            _bookValidator.ValidateAndThrowIfFailed(book);
+            _bookValidator.ValidateEntityAndThrow(book);
 
             Book updatedBook = await _booksRepository.UpdateAsync(book);
             _cacheAdapter.Update(updatedBook.GetKeyForCache(), updatedBook);
