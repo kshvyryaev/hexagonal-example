@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using FluentValidation.Results;
 using DomainValidation = HexagonalExample.Domain.Entities.Validation;
 
@@ -11,12 +11,8 @@ namespace HexagonalExample.Infrastructure.Validation.FluentValidation.Helpers
         internal static IReadOnlyCollection<DomainValidation.ValidationError> ParseToValidationErrors(
             this IEnumerable<ValidationFailure> fluentValidationErrors)
         {
-            if (fluentValidationErrors == null)
-            {
-                throw new ArgumentNullException(nameof(fluentValidationErrors));
-            }
-
             return fluentValidationErrors
+                .AsParallel()
                 .Select(x => new DomainValidation.ValidationError
                 {
                     PropertyName = x.PropertyName,
@@ -30,10 +26,7 @@ namespace HexagonalExample.Infrastructure.Validation.FluentValidation.Helpers
             this IReadOnlyCollection<DomainValidation.ValidationError> validationErrors,
             string entityName)
         {
-            foreach (var error in validationErrors)
-            {
-                error.EntityName = entityName;
-            }
+            Parallel.ForEach(validationErrors, x => x.EntityName = entityName);
 
             return validationErrors;
         }
