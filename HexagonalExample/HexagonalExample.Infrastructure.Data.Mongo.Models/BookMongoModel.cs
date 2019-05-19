@@ -17,11 +17,7 @@ namespace HexagonalExample.Infrastructure.Data.Mongo.Models
 
         public override void SetMissedIdentifiers()
         {
-            foreach (var author in Authors)
-            {
-                author.SetMissedIdentifiers();
-            }
-
+            Authors.ForEach(x => x.SetMissedIdentifiers());
             base.SetMissedIdentifiers();
         }
     }
