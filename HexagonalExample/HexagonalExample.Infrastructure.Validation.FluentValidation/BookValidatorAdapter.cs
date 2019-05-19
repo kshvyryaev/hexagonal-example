@@ -67,11 +67,7 @@ namespace HexagonalExample.Infrastructure.Validation.FluentValidation
                 .SetEntityNameForAllItems(nameof(Book));
 
             errors.AddRange(bookErrors);
-
-            foreach (var author in book.Authors)
-            {
-                errors.AddRange(_authorValidator.ValidateEntity(author));
-            }
+            book.Authors.ForEach(x => errors.AddRange(_authorValidator.ValidateEntity(x)));
 
             return errors;
         }
