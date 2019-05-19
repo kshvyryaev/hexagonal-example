@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace HexagonalExample.Domain.Entities.Validation
+﻿namespace HexagonalExample.Domain.Entities.Validation
 {
     public class ValidationError
     {
