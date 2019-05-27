@@ -87,7 +87,7 @@ namespace HexagonalExample.Domain.Core
             _bookValidator.ValidateEntityAndThrow(book);
 
             Book updatedBook = await _booksRepository.UpdateAsync(book);
-            _cacheAdapter.Update(updatedBook.GetKeyForCache(), updatedBook);
+            _cacheAdapter.Set(updatedBook.GetKeyForCache(), updatedBook);
             _cacheAdapter.Delete(AllBooksKeyForCache);
 
             return updatedBook;

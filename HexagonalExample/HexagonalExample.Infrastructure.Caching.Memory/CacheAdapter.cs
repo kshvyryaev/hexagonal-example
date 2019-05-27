@@ -43,12 +43,6 @@ namespace HexagonalExample.Infrastructure.Caching.Memory
             return _memoryCache.Get(key) as TValue;
         }
 
-        public void Update<TValue>(string key, TValue value)
-            where TValue : class
-        {
-            _memoryCache.Set(key, value, DateTime.Now.AddMinutes(CacheExpirationInMinutes));
-        }
-
         public void Delete(string key)
         {
             if (_memoryCache.Contains(key))
